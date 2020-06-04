@@ -29,9 +29,8 @@ https://github.com/raywenderlich/c-sharp-style-guide#brace-style
     - [Textures](#textures)
     - [Configuration files](#configuration-files)
     - [Localization](#localization)
-- [Suffixes and Shortcuts](#suffixes-and-shortcuts)
+- [Assets names modificators](#suffixes-and-shortcuts)
     - [General Prefixex](#general-prefixes)
-    - [Texure Suffixes](#texture-suffixes)
 
 # Asset Naming
 
@@ -411,7 +410,7 @@ ThisIsLongTypeName tltnSample = new ThisIsLongTypeName ();
 
 • Always initialize variables, even when automatic initialization exists.
 
-# Suffixes and Shortcuts
+# Assets names modificators
 
 ### General Prefixes
 
@@ -437,8 +436,6 @@ Prefix   | Meaning
 `tbr`    | ToolBar
 `statb`  | StatusBar
 `proc`   | Process
-
-## Assets names modificators ![#](https://img.shields.io/badge/lint-supported-green.svg)
 
 I took it from UE4 style guide, but most can be applied in Unity.
 
