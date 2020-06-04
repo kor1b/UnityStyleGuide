@@ -46,7 +46,90 @@ If your project contains multiple environments or art sets, use the asset type f
 
 This signifies that the folder only contains assets that are not ready for production. For example, having an `[Assets]` and `Assets` folder.
 
-## Source Code
+## Non-Code Assets
+
+If the asset name is long, choose the word order depending on what categories / subcategories you want to group assets: 
+Use `tree_small` not `small_tree`. While the latter sound better in English, it is much more effective to group all tree objects together instead of all small objects.
+
+`camelCase` where necessary. Use `weapon_miniGun` instead of `weapon_gun_mini`. Avoid this if possible, for example, `vehicles_fighterJet` should be `vehicles_jet_fighter` if you plan to have multiple types of jets.
+
+Prefer using descriptive suffixes instead of iterative: `vehicle_truck_damaged` not `vehicle_truck_01`. If using numbers as a suffix, always use 2 digits. And **do not** use it as a versioning system! Use `git` or something similar.
+
+### Persistent/Important GameObjects
+
+`_snake_case`
+
+Use a leading underscore to make object instances that are not specific to the current scene stand out.
+
+### Debug Objects
+
+`[SNAKE_CASE]`
+
+Enclose objects that are only being used for debugging/testing and are not part of the release with brackets.
+
+# File Structure
+
+```
+Root
++---Assets
++---Build
+\---Tools           # Programs to aid development: compilers, asset managers etc.
+```
+
+## Assets
+
+```
+Assets
++---Art
+|   +---Materials
+|   +---Models      # FBX and BLEND files
+|   +---Prefabs
+|   +---Textures    # PNG files
+|   +---UI
+|   +---VFX         # Visual effects, particles, etc
++---Audio
+|   +---Music
+|   \---Sound       # Samples and sound effects
++---Code
+|   +---Scripts     # C# scripts
+|   \---Shaders     # Shader files and shader graphs
++---Docs            # Wiki, concept art, marketing material
++---Level           # Anything related to game design in Unity
+|   +---Prefabs
+|   +---Scenes
+|   \---UI
+\---Resources       # Configuration files, localization text and other user files.
+```
+
+## Scripts
+
+Use namespaces that match your directory structure.
+
+A Framework directory is great for having code that can be reused across projects.
+
+The Scripts folder varies depending on the project, however, `Environment`, `Framework`, `Tools` and `UI` should be consistent  across projects.
+
+```
+Scripts
++---Environment
++---Framework
++---NPC
++---Player
++---Tools
+\---UI
+```
+
+## Models
+
+Separate files from the modelling program and ready to use, exported models.
+
+```
+Models
++---Blend
+\---FBX
+```
+
+# Source Code
 
 Use the naming convention of the programming language. For C# and shader files use `PascalCase`, as per C# convention.
 
@@ -111,7 +194,7 @@ Static fields are the exception and should be written in **PascalCase**:
 public static int TheAnswer = 42;
 ```
 
-For const fields use UPPER_CASE:
+For const fields use **UPPER_CASE**:
 
 ```csharp
 public const int MY_CONST_VALUE = 0;
@@ -250,89 +333,6 @@ if (someTest)
 {
     DoSomethingElse();
 }
-```
-
-## Non-Code Assets
-
-If the asset name is long, choose the word order depending on what categories / subcategories you want to group assets: 
-Use `tree_small` not `small_tree`. While the latter sound better in English, it is much more effective to group all tree objects together instead of all small objects.
-
-`camelCase` where necessary. Use `weapon_miniGun` instead of `weapon_gun_mini`. Avoid this if possible, for example, `vehicles_fighterJet` should be `vehicles_jet_fighter` if you plan to have multiple types of jets.
-
-Prefer using descriptive suffixes instead of iterative: `vehicle_truck_damaged` not `vehicle_truck_01`. If using numbers as a suffix, always use 2 digits. And **do not** use it as a versioning system! Use `git` or something similar.
-
-### Persistent/Important GameObjects
-
-`_snake_case`
-
-Use a leading underscore to make object instances that are not specific to the current scene stand out.
-
-### Debug Objects
-
-`[SNAKE_CASE]`
-
-Enclose objects that are only being used for debugging/testing and are not part of the release with brackets.
-
-# File Structure
-
-```
-Root
-+---Assets
-+---Build
-\---Tools           # Programs to aid development: compilers, asset managers etc.
-```
-
-## Assets
-
-```
-Assets
-+---Art
-|   +---Materials
-|   +---Models      # FBX and BLEND files
-|   +---Prefabs
-|   +---Textures    # PNG files
-|   +---UI
-|   +---VFX         # Visual effects, particles, etc
-+---Audio
-|   +---Music
-|   \---Sound       # Samples and sound effects
-+---Code
-|   +---Scripts     # C# scripts
-|   \---Shaders     # Shader files and shader graphs
-+---Docs            # Wiki, concept art, marketing material
-+---Level           # Anything related to game design in Unity
-|   +---Prefabs
-|   +---Scenes
-|   \---UI
-\---Resources       # Configuration files, localization text and other user files.
-```
-
-## Scripts
-
-Use namespaces that match your directory structure.
-
-A Framework directory is great for having code that can be reused across projects.
-
-The Scripts folder varies depending on the project, however, `Environment`, `Framework`, `Tools` and `UI` should be consistent  across projects.
-
-```
-Scripts
-+---Environment
-+---Framework
-+---NPC
-+---Player
-+---Tools
-\---UI
-```
-
-## Models
-
-Separate files from the modelling program and ready to use, exported models.
-
-```
-Models
-+---Blend
-\---FBX
 ```
 
 # Workflow
