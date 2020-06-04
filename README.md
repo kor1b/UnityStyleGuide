@@ -12,12 +12,15 @@ https://github.com/stillwwater/UnityStyleGuide#folders
 
 - [Asset Naming](#asset-naming)
     - [Folders](#folders)
-    - [Source code](#source-code)
     - [Non-code assets](#non-code-assets)
 - [File structure](#file-structure)
     - [Assets](#assets)
     - [Scripts](#scripts)
     - [Models](#models)
+- [Source code](#source-code)
+    - [Naming](#naming)
+    - [Declarations](#declarations)
+    - [Brace Style](#brace-style)
 - [Workflow](#workflow)
     - [Models](#models)
     - [Textures](#textures)
@@ -131,6 +134,8 @@ Models
 
 # Source Code
 
+## Naming ##
+
 Use the naming convention of the programming language. For C# and shader files use `PascalCase`, as per C# convention.
 
 ### Namespaces
@@ -190,7 +195,7 @@ public class MyClass
 }
 ```
 
-I prefer to use _ prefix for **private, protected and internal fields**.
+Prefer to use _ prefix for **private, protected and internal fields**.
 
 ```csharp
 private int _myPrivate = 0;
