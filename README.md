@@ -8,6 +8,22 @@ Let's thank these guys and give them a star.
 
 https://github.com/stillwwater/UnityStyleGuide#folders
 
+# Table of Contents
+
+- [Asset Naming](#asset-naming)
+    - [Folders](#folders)
+    - [Source code](#source-code)
+    - [Non-code assets](#non-code-assets)
+- [Directory/File structure](#directory-structure)
+    - [Assets](#assets)
+    - [Scripts](#scripts)
+    - [Models](#models)
+- [Workflow](#workflow)
+    - [Models](#models)
+    - [Textures](#textures)
+    - [Configuration files](#configuration-files)
+    - [Localization](#localization)
+
 # Asset Naming
 
 First of all, no\ spaces\ on file or directory names.
@@ -55,7 +71,7 @@ Use a leading underscore to make object instances that are not specific to the c
 
 Enclose objects that are only being used for debugging/testing and are not part of the release with brackets.
 
-# Directory/File Structure
+# Directory Structure
 
 ```
 Root
