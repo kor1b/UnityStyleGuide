@@ -22,11 +22,13 @@ https://github.com/raywenderlich/c-sharp-style-guide#brace-style
     - [Naming](#naming)
     - [Declarations](#declarations)
     - [Brace Style](#brace-style)
+    - [Recomendations](#recomendations)
 - [Workflow](#workflow)
     - [Models](#models)
     - [Textures](#textures)
     - [Configuration files](#configuration-files)
     - [Localization](#localization)
+- [Suffixes and Shortcuts](#suffixes-and-shortcuts)
 
 # Asset Naming
 
@@ -399,6 +401,50 @@ ThisIsLongTypeName tltnSample = new ThisIsLongTypeName ();
 • Use automatic properties;
 • Always specify the private access modifier, even if it is allowed to omit it;
 • Always initialize variables, even when automatic initialization exists.
+
+# Suffixes and Shortcuts
+
+### General Prefixes
+
+Prefix   | Meaning
+:------|:-----------------
+`lbl`    | Label
+`btn`    | Button
+`txt`    | Textbox
+`img`    | Image
+`chk`    | CheckBox
+`rdo`    | RadioButton
+`grp`    | GroupBox
+`err`    | Error
+`mnu`    | MainMenu
+`tmr`    | Timer
+`lstv`   | ListView
+`sbr`    | ScrollBar
+`trk`    | TrackBar
+`prob`   | ProgressBar
+`rtxt`   | RichTextBox
+`tip`    | ToolTip
+`cmnu`   | ContextMenu
+`tbr`    | ToolBar
+`statb`  | StatusBar
+`proc`   | Process
+
+### Texture Suffixes
+
+Suffix | Texture
+:------|:-----------------
+`_AL`  | Albedo
+`_SP`  | Specular
+`_R`   | Roughness
+`_MT`  | Metallic
+`_GL`  | Glossiness
+`_N`   | Normal
+`_H`   | Height
+`_DP`  | Displacement
+`_EM`  | Emission
+`_AO`  | Ambient Occlusion
+`_M`   | Mask
+
 
 # Workflow
 
