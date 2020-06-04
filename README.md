@@ -554,15 +554,6 @@ I took it from UE4 style guide, but most can be applied in Unity.
 | Область прорисовки текстуры-куба | Cube Render Target          | RTC_         |            |                                  |
 | Профиль освещения                | Texture Light Profile       | TLP          |            |                                  |
 
-<a name="anc-textures-packing"</a>
-<a name="5.1"></a>
-#### 5.1 Texture Packing ![#](https://img.shields.io/badge/lint-unsupported-red.svg)
-Упаковка сразу нескольких слоёв информации в одну текстуру — стандартная практика. Примером служит упаковка текстур Emissive, Roughness, Ambient Occlusion как красный, зелёный и синий каналы одной текстуры. Чтобы построить суффикс для таких текстур, просто последовательно запишите суффиксы отдельных масок из таблицы выше, напр. `_ERO`.
-
-> Часто альфа-канал включают в карту Diffuse/Альбедо. Так как это стандартная практика, добавлять суффикс `A` в суффикс `_D` необязательно.
-
-Упаковывать сразу 4 канала информации в одну текстуру (в RGBA) не рекомендуется, за исключением использования канала A как Alpha вместе с картой Diffuse/Альбедо.
-
 <a name="anc-misc"></a>
 <a name="6"></a>
 ### 6 Misc ![#](https://img.shields.io/badge/lint-supported-green.svg)
