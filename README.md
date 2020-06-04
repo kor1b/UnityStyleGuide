@@ -50,6 +50,208 @@ This signifies that the folder only contains assets that are not ready for produ
 
 Use the naming convention of the programming language. For C# and shader files use `PascalCase`, as per C# convention.
 
+### Namespaces
+
+Namespaces are all **PascalCase**, multiple words concatenated together, without hyphens ( - ) or underscores ( \_ ). The exception to this rule are acronyms like GUI or HUD, which can be uppercase:
+
+**AVOID**:
+
+```csharp
+com.raywenderlich.fpsgame.hud.healthbar
+```
+
+**PREFER**:
+
+```csharp
+RayWenderlich.FPSGame.HUD.Healthbar
+```
+
+### Classes & Interfaces
+
+Classes and interfaces are written in **PascalCase**. For example `RadialSlider`. 
+
+### Methods
+
+Methods are written in **PascalCase**. For example `DoSomething()`. 
+
+### Parameters
+
+Parameters are written in **camelCase**.
+
+```csharp
+void DoSomething(Vector3 location)
+```
+
+### Fields
+
+**Always** write an access modifiers, even if it is private.
+
+All non-static fields are written **camelCase**. Per Unity convention, this includes **public fields** as well.
+
+For example:
+
+```csharp
+public class MyClass 
+{
+    public int publicField;
+    private int _myPrivate;
+    protected int _myProtected;
+}
+```
+
+I prefer to use _ prefix for private, protected and internal fields.
+
+```csharp
+private int _myPrivate = 0;
+```
+
+Static fields are the exception and should be written in **PascalCase**:
+
+```csharp
+public static int TheAnswer = 42;
+```
+
+For const fields use UPPER_CASE:
+
+```csharp
+public const int MY_CONST_VALUE = 0;
+```
+
+### Properties
+
+All properties are written in **PascalCase**. For example:
+
+```csharp
+public int PageNumber 
+{
+    get { return pageNumber; }
+    set { pageNumber = value; }
+}
+```
+
+### Actions
+
+Actions are written in **PascalCase**. For example:
+
+```csharp
+public event Action<int> ValueChanged;
+```
+
+### Misc
+
+In code, acronyms should be treated as words. For example:
+
+**AVOID:**
+
+```csharp
+XMLHTTPRequest
+String URL
+findPostByID
+```  
+
+**PREFER:**
+
+```csharp
+XmlHttpRequest
+String url
+findPostById
+```
+
+## Declarations
+
+### Access Level Modifiers
+
+Access level modifiers should be explicitly defined for classes, methods and member variables.
+
+### Fields & Variables
+
+Prefer single declaration per line.
+
+**AVOID:**
+
+```csharp
+private string username, twitterHandle;
+```
+
+**PREFER:**
+
+```csharp
+private string username;
+private string twitterHandle;
+```
+
+**BUT:**
+
+You can use multiple declaration for **really** similar fields.
+
+```csharp
+private xPos, yPos, zPos = 0;
+public GameObject wallLeft, wallRight, wallUp, wallDown;
+```
+
+## Brace Style
+
+All braces get their own line as it is a C# convention:
+
+**AVOID:**
+
+```csharp
+class MyClass {
+    void DoSomething() {
+        if (someTest) {
+          // ...
+        } else {
+          // ...
+        }
+    }
+}
+```
+
+**PREFER:**
+
+```csharp
+class MyClass
+{
+    void DoSomething()
+    {
+        if (someTest)
+        {
+          // ...
+        }
+        else
+        {
+          // ...
+        }
+    }
+}
+```
+
+Conditional statements are always required to be enclosed with braces,
+irrespective of the number of lines required.
+
+**AVOID:**
+
+```csharp
+if (someTest)
+    doSomething();  
+
+if (someTest) doSomethingElse();
+```
+
+**PREFER:**
+
+```csharp
+if (someTest) 
+{
+    DoSomething();
+}  
+
+if (someTest)
+{
+    DoSomethingElse();
+}
+```
+
 ## Non-Code Assets
 
 If the asset name is long, choose the word order depending on what categories / subcategories you want to group assets: 
