@@ -71,6 +71,7 @@ Assets
 |   +---Prefabs
 |   +---Textures    # PNG files
 |   +---UI
+|   +---VFX         # Visual effects, particles, etc
 +---Audio
 |   +---Music
 |   \---Sound       # Samples and sound effects
