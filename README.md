@@ -208,7 +208,7 @@ Prefer to use _ prefix for **private, protected and internal fields**.
 private int _myPrivate = 0;
 ```
 
-If you need to show field in the inspector, but field is **private** use:
+If you need to show field in the inspector, but field is **private** use `[SerializeField]`:
 
 ```csharp
 [SerializeField] private int _myPrivate = 0;
