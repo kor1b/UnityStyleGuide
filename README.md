@@ -7,6 +7,7 @@ This guide has been brazenly copied and supplemented from these sources for your
 Let's thank these guys and give them a star.
 
 https://github.com/stillwwater/UnityStyleGuide#folders
+
 https://github.com/raywenderlich/c-sharp-style-guide#brace-style
 
 # Table of Contents
