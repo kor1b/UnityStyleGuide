@@ -23,6 +23,7 @@ For files, directories, scripts and a lot of other thing
 - [Assets names modificators](#suffixes-and-shortcuts)
     - [General Prefixex](#general-prefixes)
     - [Everything](#everything-ue4)
+- [Thanks](#thanks)
 
 # Asset Naming
 
