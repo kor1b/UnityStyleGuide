@@ -1,17 +1,6 @@
 # UnityStyleGuide
 For files, directories, scripts and a lot of other thing
 
-# Thanks
-This guide has been brazenly copied and supplemented from these sources for your convenience :)
-
-Let's thank these guys and give them a star.
-
-https://github.com/stillwwater/UnityStyleGuide#folders
-
-https://github.com/raywenderlich/c-sharp-style-guide#brace-style
-
-https://github.com/CosmoMyzrailGorynych/ue4-style-guide-rus/blob/master/README.md#2.1.2
-
 # Table of Contents
 
 - [Asset Naming](#asset-naming)
@@ -697,3 +686,14 @@ Use binary file formats for files that should not be changed by the player. For 
 File extension: `CSV`
 
 Widely used by localization software, makes it trivial to edit strings using spreadsheets.
+
+# Thanks
+This guide has been brazenly copied and supplemented from these sources for your convenience :)
+
+Let's thank these guys and give them a star.
+
+https://github.com/stillwwater/UnityStyleGuide#folders
+
+https://github.com/raywenderlich/c-sharp-style-guide#brace-style
+
+https://github.com/CosmoMyzrailGorynych/ue4-style-guide-rus/blob/master/README.md#2.1.2
