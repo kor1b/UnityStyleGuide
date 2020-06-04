@@ -149,25 +149,33 @@ com.raywenderlich.fpsgame.hud.healthbar
 RayWenderlich.FPSGame.HUD.Healthbar
 ```
 
+
 ### Classes & Interfaces
 
-Classes and interfaces are written in **PascalCase**. For example `RadialSlider`. 
+Classes and interfaces are written in **PascalCase**.
+
+```csharp
+public class SomeClass{}
+```
 
 ### Methods
 
-Methods are written in **PascalCase**. For example `DoSomething()`. 
+Methods are written in **PascalCase**.
+
+```csharp
+private void DoSomething()
+```
 
 ### Parameters
 
 Parameters are written in **camelCase**.
 
 ```csharp
-void DoSomething(Vector3 location)
+private void DoSomething(Vector3 location)
 ```
 
+ 
 ### Fields
-
-**Always** write an access modifiers, even if it is private.
 
 All non-static fields are written **camelCase**. Per Unity convention, this includes **public fields** as well.
 
@@ -182,7 +190,7 @@ public class MyClass
 }
 ```
 
-I prefer to use _ prefix for private, protected and internal fields.
+I prefer to use _ prefix for **private, protected and internal fields**.
 
 ```csharp
 private int _myPrivate = 0;
@@ -200,47 +208,7 @@ For const fields use **UPPER_CASE**:
 public const int MY_CONST_VALUE = 0;
 ```
 
-### Properties
-
-All properties are written in **PascalCase**. For example:
-
-```csharp
-public int PageNumber 
-{
-    get { return pageNumber; }
-    set { pageNumber = value; }
-}
-```
-
-### Actions
-
-Actions are written in **PascalCase**. For example:
-
-```csharp
-public event Action<int> ValueChanged;
-```
-
-### Misc
-
-In code, acronyms should be treated as words. For example:
-
-**AVOID:**
-
-```csharp
-XMLHTTPRequest
-String URL
-findPostByID
-```  
-
-**PREFER:**
-
-```csharp
-XmlHttpRequest
-String url
-findPostById
-```
-
-## Declarations
+## Declarations ##
 
 ### Access Level Modifiers
 
@@ -270,6 +238,52 @@ You can use multiple declaration for **really** similar fields.
 ```csharp
 private xPos, yPos, zPos = 0;
 public GameObject wallLeft, wallRight, wallUp, wallDown;
+```
+
+### Properties
+
+All properties are written in **PascalCase**. For example:
+
+```csharp
+public int PageNumber 
+{
+    get { return pageNumber; }
+    set { pageNumber = value; }
+}
+```
+
+Also you can use a short option:
+
+```csharp
+public int PageNumber => pageNumber;
+```
+
+### Actions
+
+Actions are written in **PascalCase**. For example:
+
+```csharp
+public event Action<int> ValueChanged;
+```
+
+### Misc
+
+In code, acronyms should be treated as words. For example:
+
+**AVOID:**
+
+```csharp
+XMLHTTPRequest
+String URL
+findPostByID
+```  
+
+**PREFER:**
+
+```csharp
+XmlHttpRequest
+String url
+findPostById
 ```
 
 ## Brace Style
