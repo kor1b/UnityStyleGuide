@@ -31,6 +31,7 @@ https://github.com/raywenderlich/c-sharp-style-guide#brace-style
     - [Localization](#localization)
 - [Assets names modificators](#suffixes-and-shortcuts)
     - [General Prefixex](#general-prefixes)
+    - [Everything](#everything-ue4)
 
 # Asset Naming
 
@@ -436,6 +437,8 @@ Prefix   | Meaning
 `tbr`    | ToolBar
 `statb`  | StatusBar
 `proc`   | Process
+
+## Everything UE4
 
 I took it from UE4 style guide, but most can be applied in Unity.
 
