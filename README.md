@@ -10,6 +10,8 @@ https://github.com/stillwwater/UnityStyleGuide#folders
 
 https://github.com/raywenderlich/c-sharp-style-guide#brace-style
 
+https://github.com/CosmoMyzrailGorynych/ue4-style-guide-rus/blob/master/README.md#2.1.2
+
 # Table of Contents
 
 - [Asset Naming](#asset-naming)
