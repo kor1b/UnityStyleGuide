@@ -393,7 +393,10 @@ if (someTest)
 
 ## Recomendations ##
 
-• Avoid using shortcut names like **i** and **t**, use **index** and **temp**. Do not use Hungarian notation or use it only for private members. Do not shorten the words, use number, not num.
+• Avoid using shortcut names like **i** and **t**, use **index** and **temp**. 
+
+• Do not use Hungarian notation or use it only for private members. Do not shorten the words, use number, not num.
+
 • It is recommended that names of control elements include prefixes that describe the type of element. For example: **txtSample, lblSample, cmdSample or btnSample**. The same recommendation applies to local variables of complex types: 
 
 ```csharp
@@ -401,8 +404,11 @@ ThisIsLongTypeName tltnSample = new ThisIsLongTypeName ();
 ```
 
 • Do not use public or protected fields, use properties instead;
+
 • Use automatic properties;
+
 • Always specify the private access modifier, even if it is allowed to omit it;
+
 • Always initialize variables, even when automatic initialization exists.
 
 # Suffixes and Shortcuts
