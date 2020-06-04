@@ -14,7 +14,7 @@ https://github.com/stillwwater/UnityStyleGuide#folders
     - [Folders](#folders)
     - [Source code](#source-code)
     - [Non-code assets](#non-code-assets)
-- [Directory/File structure](#directory-structure)
+- [File structure](#file-structure)
     - [Assets](#assets)
     - [Scripts](#scripts)
     - [Models](#models)
@@ -71,7 +71,7 @@ Use a leading underscore to make object instances that are not specific to the c
 
 Enclose objects that are only being used for debugging/testing and are not part of the release with brackets.
 
-# Directory Structure
+# File Structure
 
 ```
 Root
