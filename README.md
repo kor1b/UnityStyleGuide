@@ -29,6 +29,8 @@ https://github.com/raywenderlich/c-sharp-style-guide#brace-style
     - [Configuration files](#configuration-files)
     - [Localization](#localization)
 - [Suffixes and Shortcuts](#suffixes-and-shortcuts)
+    - [General Prefixex](#general-prefixes)
+    - [Texure Suffixes](#texture-suffixes)
 
 # Asset Naming
 
