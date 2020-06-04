@@ -3,7 +3,10 @@ For files, directories, scripts and a lot of other thing
 
 # Thanks
 This guide has been brazenly copied and supplemented from these sources for your convenience :)
+
 Let's thank these guys and give them a star.
+
+https://github.com/stillwwater/UnityStyleGuide#folders
 
 # Asset Naming
 
@@ -86,3 +89,99 @@ Assets
 \---Resources       # Configuration files, localization text and other user files.
 ```
 
+## Scripts
+
+Use namespaces that match your directory structure.
+
+A Framework directory is great for having code that can be reused across projects.
+
+The Scripts folder varies depending on the project, however, `Environment`, `Framework`, `Tools` and `UI` should be consistent  across projects.
+
+```
+Scripts
++---Environment
++---Framework
++---NPC
++---Player
++---Tools
+\---UI
+```
+
+## Models
+
+Separate files from the modelling program and ready to use, exported models.
+
+```
+Models
++---Blend
+\---FBX
+```
+
+# Workflow
+
+## Models
+
+File extension: `FBX`
+
+Even though Unity supports Blender files by default, it is better to keep what is being worked on and what is a complete, exported model separate. This is also a must when using other software, such as Substance for texturing.
+
+Use `Y up`, `-Z forward` and `uniform scale` when exporting.
+
+## Textures
+
+File extension: `PNG`, `TIFF` or `HDR`
+
+Choose either a `Specularity/Glossiness` or `Roughness/Metallic` workflow. This depends on the software being used and what your artists are more comfortable with. Specularity maps have the advantage of being having the possibility to be RGB maps instead of grayscale (useful for tinted metals), apart from that there is little difference between the result from either workflow.
+
+### Texture Suffixes
+
+Suffix | Texture
+:------|:-----------------
+`_AL`  | Albedo
+`_SP`  | Specular
+`_R`   | Roughness
+`_MT`  | Metallic
+`_GL`  | Glossiness
+`_N`   | Normal
+`_H`   | Height
+`_DP`  | Displacement
+`_EM`  | Emission
+`_AO`  | Ambient Occlusion
+`_M`   | Mask
+
+### RGB Masks
+
+It is good practice to use a single texture to combine black and white masks in a single texture split by each RGB channel. Using this, most textures should have:
+
+```
+texture_AL.png  # Albedo
+texture_N.png   # Normal Map
+texture_M.png   # Mask
+```
+
+Channel | Spec/Gloss        | Rough/Metal
+:-------|:------------------|:-----------
+R       | Specularity       | Roughness
+G       | Glossiness        | Metallic
+B       | Ambient Occlusion | Ambient Occlusion
+
+#### The blue channel can vary depending on the type of material:
+
+ - For character materials use the `B` channel for *subsurface opacity/strength*
+ - For anisotropic materials use the `B` channel for the *anisotropic direction map*
+ 
+ ## Configuration Files
+
+File extension: `INI`
+
+Fast and easy to parse, clean and easy to tweak.
+
+`XML`, `JSON`, and `YAML` are also good alternatives, pick one and be consistent.
+
+Use binary file formats for files that should not be changed by the player. For multiplayer games store configuration data on a secure server.
+
+## Localization
+
+File extension: `CSV`
+
+Widely used by localization software, makes it trivial to edit strings using spreadsheets.
