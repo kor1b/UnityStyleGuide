@@ -438,22 +438,219 @@ Prefix   | Meaning
 `statb`  | StatusBar
 `proc`   | Process
 
-### Texture Suffixes
+## Assets names modificators ![#](https://img.shields.io/badge/lint-supported-green.svg)
 
-Suffix | Texture
-:------|:-----------------
-`_AL`  | Albedo
-`_SP`  | Specular
-`_R`   | Roughness
-`_MT`  | Metallic
-`_GL`  | Glossiness
-`_N`   | Normal
-`_H`   | Height
-`_DP`  | Displacement
-`_EM`  | Emission
-`_AO`  | Ambient Occlusion
-`_M`   | Mask
+I took it from UE4 style guide, but most can be applied in Unity.
 
+#### Subsections
+
+> 1 [Common](#anc-common)
+
+> 2 [Animations](#anc-animations)
+
+> 3 [AI](#anc-ai)
+
+> 4 [Materials](#anc-materials)
+
+> 5 [Textures](#anc-textures)
+
+> 6 [Misc](#anc-misc)
+
+> 7 [Paper 2D](#anc-paper2d)
+
+> 8 [Physics](#anc-physics)
+
+> 9 [Sound](#anc-sound)
+
+> 10 [UI](#anc-ui)
+
+> 11 [Effects](#anc-effects)
+
+<a name="anc-common"></a>
+<a name="1"></a>
+#### 1 Common ![#](https://img.shields.io/badge/lint-supported-green.svg)
+
+| Тип ассета (RU)      | Asset Type (EN)    | Prefix       | Suffix     | Notes                               |
+| -------------------- | ------------------ | ------------ | ---------- | ----------------------------------- |
+| Карта / уровень      | Level / Map        |              |            |                                     |
+| Уровень (постоянный) | Level (Persistent) |              | _P         |                                     |
+| Уровень (аудио)      | Level (Audio)      |              | _Audio     |                                     |
+| Уровень (освещение)  | Level (Lighting)   |              | _Lighting  |                                     |
+| Уровень (геометрия)  | Level (Geometry)   |              | _Geo       |                                     |
+| Уровень (геймплей)   | Level (Gameplay)   |              | _Gameplay  |                                     |
+| Материал             | Material           | M_           |            |                                     |
+| Статичный меш        | Static Mesh        |        SM_   |            |                                     |
+| Скелетный меш        | Skeletal Mesh      | SK_          |            |                                     |
+| Текстура             | Texture            | T_           | _?         | См. [Текстуры](#anc-textures)       |
+| Система частиц       | Particle System    | PS_          |            |                                     |
+
+<a name="anc-animations"></a>
+<a name="2"></a>
+#### 2 Animations ![#](https://img.shields.io/badge/lint-supported-green.svg)
+
+| Тип ассета (RU)      | Asset Type (EN)    | Prefix       | Suffix     | Notes                               |
+| --------------------------- | --------------------- | ---------- | ---------- | ------------------------ |
+| Сдвиг прицела               | Aim Offset            | AO_        |            |                          |
+| Сдвиг прицела 1D            | Aim Offset 1D         | AO_        |            |                          |
+| Композиция анимации         | Animation Composite   | AC_        |            |                          |
+| Монтаж анимации             | Animation Montage     | AM_        |            |                          |
+| Последовательность анимаций | Animation             | A _        |            |                          |
+| Пространство смешивания     | Blend Space           | BS_        |            |                          |
+| Пространство смешивания 1D  | Blend Space 1D        | BS_        |            |                          |
+| Последовательность уровня   | Level Sequence        | LS_        |            |                          |
+| Точка смешивания            | Morph Target          | MT_        |            |                          |
+| Paper Flipbook              | Paper Flipbook        | PFB_       |            |                          |
+| Риг                         | Rig                   | Rig_       |            |                          |
+| Скелетный меш               | Skeletal Mesh         | SK_        |            |                          |
+| Скелет                      | Skeleton              | SKEL_      |            |                          |
+
+<a name="anc-ai"></a>
+<a name="3"></a>
+### 3 AI ![#](https://img.shields.io/badge/lint-supported-green.svg)
+
+| Тип ассета (RU)      | Asset Type (EN)    | Prefix       | Suffix       | Notes                               |
+| ----------------------- | ----------------- | ------------ | ---------- | ---------- |
+| ИИ контроллер           | AI Controller     | AIC_         |            |            |
+| Дерево поведений        | Behavior Tree     | BT_          |            |            |
+| Доска состояний         | Blackboard        | BB_          |            |            |
+| Декоратор               | Decorator         | BTDecorator_ |            |            |
+| Сервис                  | Service           | BTService_   |            |            |
+| Задание                 | Task              | BTTask_      |            |            |
+
+<a name="anc-materials"></a>
+<a name="4"></a>
+### 4 Materials ![#](https://img.shields.io/badge/lint-supported-green.svg)
+
+| Тип ассета (RU)      | Asset Type (EN)    | Prefix       | Suffix     | Notes                               |
+| ----------------------------- | ----------------------------- | ------------ | ------- | ------------------------- |
+| Материал                      | Material                      | M_           |         |                           |
+| Материал пост-обработки       | Material (Post Process)       | PP_          |         |                           |
+| Функция материалов            | Material Function             | MF_          |         |                           |
+| Экземпляр материала           | Material Instance             | MI_          |         |                           |
+| Материал Parameter Collection | Material Parameter Collection | MPC_         |         |                           |
+| Профиль подповерхности        | Subsurface Profile            |  SSP_        |         |                           |
+| Физический материал           | Physical Materials            | PM_          |         |                           |
+
+<a name="anc-textures"></a>
+<a name="5"></a>
+### 5 Textures ![#](https://img.shields.io/badge/lint-supported-green.svg)
+
+| Тип ассета (RU)      | Asset Type (EN)    | Prefix       | Suffix     | Notes                               |
+| -------------------------------- | --------------------------- | ------------ | ---------- | -------------------------------- |
+| Текстура                         | Texture                     | T_           |            |                                  |
+| Текстура (Diffuse/Альбедо/Основной цвет)| Texture (Diffuse/Albedo/Base Color)| T_ | _D      |                                  |
+| Текстура (Нормаль)               | Texture (Normal)            | T_           | _N         |                                  |
+| Текстура (Грубость)              | Texture (Roughness)         | T_           | _R         |                                  |
+| Текстура (Alpha/Прозрачность)    | Texture (Alpha/Opacity)     | T_           | _A         |                                  |
+| Текстура (Нейтральный свет)      | Texture (Ambient Occlusion) | T_           | _O или _AO | Выберите одно. Лучше _O          |
+| Текстура (Неровность)            | Texture (Bump)              | T_           | _B         |                                  |
+| Текстура (Излучение)             | Texture (Emissive)          | T_           | _E         |                                  |
+| Текстура (Маска)                 | Texture (Mask)              | T_           | _M         |                                  |
+| Текстура (Блеск)                 | Texture (Specular)          | T_           | _S         |                                  |
+| Текстура (упакованная)           | Texture (Packed)            | T_           | _*         | См. примечание об [упаковке текстур](#anc-textures-packing). |
+| Текстура-куб                     | Texture Cube                | TC_          |            |                                  |
+| Текстура-медиа                   | Media Texture               | MT_          |            |                                  |
+| Область прорисовки               | Render Target               | RT_ или RTT_ |            | Выберите одно. Лучше RT_         |
+| Область прорисовки текстуры-куба | Cube Render Target          | RTC_         |            |                                  |
+| Профиль освещения                | Texture Light Profile       | TLP          |            |                                  |
+
+<a name="anc-textures-packing"</a>
+<a name="5.1"></a>
+#### 5.1 Texture Packing ![#](https://img.shields.io/badge/lint-unsupported-red.svg)
+Упаковка сразу нескольких слоёв информации в одну текстуру — стандартная практика. Примером служит упаковка текстур Emissive, Roughness, Ambient Occlusion как красный, зелёный и синий каналы одной текстуры. Чтобы построить суффикс для таких текстур, просто последовательно запишите суффиксы отдельных масок из таблицы выше, напр. `_ERO`.
+
+> Часто альфа-канал включают в карту Diffuse/Альбедо. Так как это стандартная практика, добавлять суффикс `A` в суффикс `_D` необязательно.
+
+Упаковывать сразу 4 канала информации в одну текстуру (в RGBA) не рекомендуется, за исключением использования канала A как Alpha вместе с картой Diffuse/Альбедо.
+
+<a name="anc-misc"></a>
+<a name="6"></a>
+### 6 Misc ![#](https://img.shields.io/badge/lint-supported-green.svg)
+
+| Тип ассета (RU)      | Asset Type (EN)    | Prefix       | Suffix     | Notes                               |
+| ----------------------- | ----------------------- | ---------- | ---------- | -------------------------------- |
+| Анимированное векторное поле| Animated Vector Field| VFA_      |            |                                  |
+| Анимация камеры         | Camera Anim             | CA_        |            |                                  |
+| Цветовая кривая         | Color Curve             | Curve_     | _Color     |                                  |
+| Табличная кривая        | Curve Table             | Curve_     | _Table     |                                  |
+| Набор данных            | Data Asset              | *_         |            | Префикс основывается на классе   |
+| Таблица данных          | Data Table              | DT_        |            |                                  |
+| Вещественная кривая     | Float Curve             | Curve_     | _Float     |                                  |
+| Тип растительности      | Foliage Type            | FT_        |            |                                  |
+| Эффект физического отклика| Force Feedback Effect | FFE_       |            |                                  |
+| Тип растительности      | Landscape Grass Type    | LG_        |            |                                  |
+| Слой ландшафта          | Landscape Layer         | LL_        |            |                                  |
+| Данные Matinee          | Matinee Data            | Matinee_   |            |                                  |
+| Медиапроигрыватель      | Media Player            | MP_        |            |                                  |
+| Библиотека объектов     | Object Library          | OL_        |            |                                  |
+| Перенаправление         | Redirector              |            |            | Перенаправление должно быть исправлено при первой возможности |
+| Атлас спрайтов          | Sprite Sheet            | SS_        |            |                                  |
+| Статичное векторное поле| Static Vector Field     | VF_        |            |                                  |
+| Настройка тач-интерфейса| Touch Interface Setup   | TI_        |            |                                  |
+| Векторная кривая        | Vector Curve            | Curve_     | _Vector    |                                  |
+
+<a name="anc-paper2d"></a>
+<a name="7"></a>
+### 7 Paper 2D ![#](https://img.shields.io/badge/lint-supported-green.svg)
+
+| Тип ассета (RU)      | Asset Type (EN)    | Prefix       | Suffix     | Notes                               |
+| ----------------------- | ----------------------- | ---------- | ---------- | -------------------------------- |
+| Набор кадров            | Paper Flipbook          | PFB_       |            |                                  |
+| Спрайт                  | Sprite                  | SPR_       |            |                                  |
+| Группа атласов спрайтов | Sprite Atlas Group      | SPRG_      |            |                                  |
+| Карта тайлов            | Tile Map                | TM_        |            |                                  |
+| Тайлсет                 | Tile Set                | TS_        |            |                                  |
+
+<a name="anc-physics"></a>
+<a name="8"></a>
+### 8 Physics ![#](https://img.shields.io/badge/lint-supported-green.svg)
+
+| Тип ассета (RU)      | Asset Type (EN)    | Prefix       | Suffix     | Notes                               |
+| ----------------------- | ----------------------- | ---------- | ---------- | -------------------------------- |
+| Физический материал     | Physical Material       | PM_        |            |                                  |
+| Физический ассет        | Physical Asset          | PHYS_      |            |                                  |
+| Разрушаемый меш         | Destructible Mesh       | DM_        |            |                                  |
+| Rigidbody               | Rigidbody               | rb_        |            |                                  |
+| Rigidbody2D             | Rigidbody2D             | rb2D_      |            |                                  |
+
+<a name="anc-sounds"></a>
+<a name="9"></a>
+### 9 Sounds ![#](https://img.shields.io/badge/lint-supported-green.svg)
+
+| Тип ассета (RU)      | Asset Type (EN)    | Prefix       | Suffix     | Notes                               |
+| ----------------------- | ----------------------- | ---------- | ---------- | -------------------------------- |
+| Голос диалога           | Dialogue Voice          | DV_        |            |                                  |
+| Запись диалога          | Dialogue Wave           | DW_        |            |                                  |
+| Звукозапись медиа       | Media Sound Wave        | MSW_       |            |                                  |
+| Эффект ревербации       | Reverb Effect           | Reverb_    |            |                                  |
+| Затухание звука         | Sound Attenuation       | ATT_       |            |                                  |
+| Класс звука             | Sound Class             |            |            | Без префиксов/суффиксов. Должен быть в отдельной папке `SoundClasses` |
+| Очерёдность звуков      | Sound Concurrency       |            | _SC        | Должен быть назван на основе `SoundClass` |
+| Композиция звуков       | Sound Cue               | A_         | _Cue       |                                  |
+| Микс звуков             | Sound Mix               | Mix_       |            |                                  |
+| Звукозапись             | Sound Wave              | A_         |            |                                  |
+
+<a name="anc-ui"></a>
+<a name="10"></a>
+### 10 UI ![#](https://img.shields.io/badge/lint-supported-green.svg)
+
+| Тип ассета (RU)      | Asset Type (EN)    | Prefix       | Suffix     | Notes                               |
+| ----------------------- | ----------------------- | ------------ | ---------- | -------------------------------- |
+| Шрифт                   | Font                    | Font_        |            |                                  |
+| Кисть Slate             | Slate Brush             | Brush_       |            |                                  |
+| Стиль виджета Slate     | Slate Widget Style      | Style_       |            |                                  |
+
+<a name="anc-effects"></a>
+<a name="1.2.12"></a>
+### 11 Effects ![#](https://img.shields.io/badge/lint-supported-green.svg)
+
+| Тип ассета (RU)      | Asset Type (EN)    | Prefix       | Suffix     | Notes                               |
+| ----------------------- | ----------------------- | ---------- | ---------- | -------------------------------- |
+| Система частиц          | Particle System         | PS_        |            |                                  |
+| Материал постобработки  | Material (Post Process) | PP_        |            |                                  |
+
+<a name="2"></a>
+<a name="structure"></a>
 
 # Workflow
 
@@ -470,22 +667,6 @@ Use `Y up`, `-Z forward` and `uniform scale` when exporting.
 File extension: `PNG`, `TIFF` or `HDR`
 
 Choose either a `Specularity/Glossiness` or `Roughness/Metallic` workflow. This depends on the software being used and what your artists are more comfortable with. Specularity maps have the advantage of being having the possibility to be RGB maps instead of grayscale (useful for tinted metals), apart from that there is little difference between the result from either workflow.
-
-### Texture Suffixes
-
-Suffix | Texture
-:------|:-----------------
-`_AL`  | Albedo
-`_SP`  | Specular
-`_R`   | Roughness
-`_MT`  | Metallic
-`_GL`  | Glossiness
-`_N`   | Normal
-`_H`   | Height
-`_DP`  | Displacement
-`_EM`  | Emission
-`_AO`  | Ambient Occlusion
-`_M`   | Mask
 
 ### RGB Masks
 
