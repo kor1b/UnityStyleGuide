@@ -7,6 +7,7 @@ This guide has been brazenly copied and supplemented from these sources for your
 Let's thank these guys and give them a star.
 
 https://github.com/stillwwater/UnityStyleGuide#folders
+https://github.com/raywenderlich/c-sharp-style-guide#brace-style
 
 # Table of Contents
 
@@ -195,10 +196,18 @@ public class MyClass
 }
 ```
 
+Do not use **public**. Prefer properties.
+
 Prefer to use _ prefix for **private, protected and internal fields**.
 
 ```csharp
 private int _myPrivate = 0;
+```
+
+If you need to show field in the inspector, but field is **private** use:
+
+```csharp
+[SerializeField] private int _myPrivate = 0;
 ```
 
 Static fields are the exception and should be written in **PascalCase**:
@@ -211,6 +220,18 @@ For const fields use **UPPER_CASE**:
 
 ```csharp
 public const int MY_CONST_VALUE = 0;
+```
+
+### Enums 
+
+Use **PascalCase** for enum:
+
+```csharp
+enum SampleEnum
+{
+    FirstValue,
+    SecondValue
+}
 ```
 
 ## Declarations ##
@@ -291,6 +312,17 @@ String url
 findPostById
 ```
 
+## Attributes
+
+A lot of different attributes here: https://assetstore.unity.com/packages/tools/utilities/naughtyattributes-129996#description
+
+This assset even `[SerializeField]` properties.
+
+## Declaration order: ##
+1. private, protected fields (in this order)
+2. properties
+3. private, protected, public methods (in this order)
+
 ## Brace Style
 
 All braces get their own line as it is a C# convention:
@@ -353,6 +385,20 @@ if (someTest)
     DoSomethingElse();
 }
 ```
+
+## Recomendations ##
+
+• Avoid using shortcut names like **i** and **t**, use **index** and **temp**. Do not use Hungarian notation or use it only for private members. Do not shorten the words, use number, not num.
+• It is recommended that names of control elements include prefixes that describe the type of element. For example: **txtSample, lblSample, cmdSample or btnSample**. The same recommendation applies to local variables of complex types: 
+
+```csharp
+ThisIsLongTypeName tltnSample = new ThisIsLongTypeName ();
+```
+
+• Do not use public or protected fields, use properties instead;
+• Use automatic properties;
+• Always specify the private access modifier, even if it is allowed to omit it;
+• Always initialize variables, even when automatic initialization exists.
 
 # Workflow
 
