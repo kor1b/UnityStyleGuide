@@ -484,7 +484,7 @@ I took it from UE4 style guide, but most can be applied in Unity.
 | --------------------------- | --------------------- | ---------- | ---------- | ------------------------ |
 | Сдвиг прицела               | Aim Offset            | AO_        |            |                          |
 | Сдвиг прицела 1D            | Aim Offset 1D         | AO_        |            |                          |
-| Композиция анимации         | Animation Composite   | AC_        |            |                          |
+| Контроллер анимации         | Animation Controller  | AC_        |            |                          |
 | Монтаж анимации             | Animation Montage     | AM_        |            |                          |
 | Последовательность анимаций | Animation             | A _        |            |                          |
 | Пространство смешивания     | Blend Space           | BS_        |            |                          |
