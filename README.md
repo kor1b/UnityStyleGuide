@@ -195,11 +195,17 @@ public class MyClass
 
 Do not use **public**. Prefer properties.
 
-Prefer to use _ prefix for **private, protected and internal fields**.
+Prefer to use **_** prefix for **private, protected and internal fields** (Except when you set up a value in the inspector)
 
 ```csharp
-private int _myPrivate = 0;
+[SerializeField] [ReadOnly] private int _myPrivate = 0;
 ```
+
+**BUT** (don't use _ when you set up a value in the inspector)
+```csharp
+[SerializeField] private int myPrivate = 0;
+```
+
 
 If you need to show field in the inspector, but field is **private** use `[SerializeField]`:
 
