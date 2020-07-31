@@ -180,7 +180,7 @@ private void DoSomething(Vector3 location)
  
 ### Fields
 
-All non-static fields are written **camelCase**. Per Unity convention, this includes **public fields** as well.
+All non-static fields are written **camelCase**. Per Unity convention, this includes **public and protected fields** as well.
 
 For example:
 
@@ -189,13 +189,13 @@ public class MyClass
 {
     public int publicField;
     private int _myPrivate;
-    protected int _myProtected;
+    protected int myProtected;
 }
 ```
 
 Do not use **public**. Prefer properties.
 
-Prefer to use **_** prefix for **private, protected and internal fields** (Except when you set up a value in the inspector)
+Prefer to use **_** prefix for **private and internal fields** (Except when you set up a value in the inspector)
 
 ```csharp
 [SerializeField] [ReadOnly] private int _myPrivate = 0;
